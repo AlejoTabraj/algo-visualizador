@@ -1,16 +1,40 @@
 import './App.css';
 import { BubleSortBarras } from './components/Algos/bubleSort/BubleSortBarras';
 import { BubleSortCircle } from './components/Algos/bubleSort/BubleSortCircle';
+import { MergeSort } from './components/MergeSort.js/MergeSort';
 import { NavBar } from './components/sections/NavBar';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
+    <Router>
     <main>
-      <NavBar />
-      <BubleSortCircle />
-      <BubleSortBarras />
+      
+    <NavBar />
 
+      {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+      <Switch>
+        <Route exact path="/">
+        <BubleSortCircle />
+        <BubleSortBarras />        
+        </Route>
+        <Route path="/users">
+         hola
+        </Route>
+        <Route exact path="/mergesort">
+        <MergeSort />
+        </Route>
+      </Switch>
     </main>
+  </Router>
+    
   );
 }
 

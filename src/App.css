@@ -65,11 +65,17 @@ nav {
   display: flex;
   color: var(--green);
   background-color: #150b7281;
-  font-size: calc(var(--font-size) * 0.5);
+  font-size: calc(var(--font-size) * 1);
   justify-content: space-around;
 }
 
-nav h2:hover {
+nav a{
+  list-style: none;
+  text-decoration: none;
+  padding: .5rem 0;
+}
+
+nav a:hover {
   color: var(--red);
   cursor: pointer;
 }
@@ -77,6 +83,9 @@ nav h2:selected {
   color: var(--red);
 }
 
+.m-top {
+  padding-top: 25vh;
+}
 
 @media (min-width: 720px){
   .cubes {
@@ -87,6 +96,9 @@ nav h2:selected {
   main{
     text-align: center;
     align-items: center;
+  }
+  nav {
+    padding: 0 15%;
   }
   
 }
