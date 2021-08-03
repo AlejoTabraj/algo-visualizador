@@ -9,6 +9,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { InsertionSort } from './components/Algos/insertSort/InsertSort';
 
 
 function App() {
@@ -25,8 +26,8 @@ function App() {
         <BubleSortCircle />
         <BubleSortBarras />        
         </Route>
-        <Route path="/users">
-         hola
+        <Route path="/insertsort">
+         <InsertionSort />
         </Route>
         <Route exact path="/mergesort">
         <MergeSort />
