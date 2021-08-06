@@ -4,6 +4,8 @@ import { GiBranchArrow } from 'react-icons/gi'
 export const  MergeSort = () => {
   const [arr, setArr] = useState([]);
   const [index, setIndex] = useState([]);
+  const [change, setChange] = useState(true)
+
 
   function flatten(arr) {
     const newArr = arr.reduce((acc, item) => {
@@ -72,7 +74,7 @@ export const  MergeSort = () => {
       newArray.push(Math.floor(Math.random() * 20));
     }
     setArr([...newArray]);
-  }, []);
+  }, [change]);
 
   function mergeSort(array) {
     if (array.length === 1) return array;
@@ -100,13 +102,20 @@ export const  MergeSort = () => {
             />
           ))}
       </div>
-      <section>
+      <section className='s-around'>
         <button
           onClick={e => {
             mergeSort(arr);
           }}
         >
           Ordenar
+        </button>
+        <button
+          onClick={e => {
+            setChange(!change);
+          }}
+        >
+          Generar
         </button>
       </section>
     </>

@@ -1,8 +1,15 @@
 :root {
   --green: rgb(15, 179, 64);
-  --blue:  rgb(53, 14, 224);
+  --blue:  rgb(224, 14, 154);
   --red:  #ec0e0ee3;
+  --white: #FFFFFF;
   --font-size: 1em;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'STIX Two Math', serif;
 }
 
 body {
@@ -32,6 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 .select {
   background-color: var(--blue);
@@ -39,6 +47,38 @@ body {
 .select2 {
   background-color: var(--red);
 
+}
+.select2 {
+  animation-name: blop;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running
+}
+
+@keyframes blop {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    background: rgb(15,179,64);
+    background: radial-gradient(circle, rgba(231,7,7,1) 100%, rgba(15,179,64,1) 0%);
+  }
+
+  75% {
+    transform: scale(1.02);
+    background: rgb(15,179,64);
+    background: radial-gradient(circle, rgba(15,179,64,1) 0%, rgba(231,7,7,1) 100%);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: var(--red);
+  }
 }
 .indi {
   width: 1rem;
@@ -56,6 +96,7 @@ button {
   padding: .5em;
   background-color: var(--green);
   cursor: pointer;
+  margin-bottom: .2rem;
 }
 button:active {
   color: var(--blue);
@@ -98,6 +139,10 @@ nav h2:selected {
 .m-top {
   padding-top: 25vh;
 }
+.s-around{
+  display: flex;
+  justify-content: space-between;
+}
 
 @media (min-width: 720px){
   .cubes {
@@ -111,6 +156,10 @@ nav h2:selected {
   }
   nav ul{
     padding: 0 15%;
+  }
+  .s-around{
+    display: flex;
+    justify-content: space-around;
   }
   
 }

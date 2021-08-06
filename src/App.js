@@ -12,6 +12,7 @@ import {
 import { InsertionSort } from './components/Algos/insertSort/InsertSort';
 import QuickSort from './components/quickSort/QuickSort';
 import QuickSortCircle from './components/quickSort/QuickSortCircle';
+import { InsertionSortCircle } from './components/Algos/insertSort/InsertionSortCircle';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <QuickSort />
         </Route>
         <Route path="/insertsort">
+          <InsertionSortCircle />
          <InsertionSort />
         </Route>
         <Route path="/bublesort">         
