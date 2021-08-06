@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { GiBranchArrow } from 'react-icons/gi'
 
 export const  MergeSort = () => {
   const [arr, setArr] = useState([]);
@@ -88,7 +89,7 @@ export const  MergeSort = () => {
       <div className="cubes m-top">
         {arr.length &&
           arr.map((element, i) => (
-            <div
+            <GiBranchArrow
               style={{
                 height: `${10 * element}px`,
                 width: `calc(100% / ${arr.length})`,

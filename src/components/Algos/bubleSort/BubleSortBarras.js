@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import { GiBranchArrow } from 'react-icons/gi'
 
 export const BubleSortBarras = () => {
     const [arr, setArr] = useState([4, 3, 5, 6, 8, 2, 4]);
@@ -44,7 +45,7 @@ export const BubleSortBarras = () => {
         <div className="cubes">
           {arr &&
             arr.map((element, i) => (
-              <div
+              <GiBranchArrow
                 style={{
                   height: `${10 * element}px`,
                   width: `calc(100% / ${lines})`,

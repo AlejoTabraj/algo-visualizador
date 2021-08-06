@@ -10,6 +10,8 @@ import {
   Link
 } from "react-router-dom";
 import { InsertionSort } from './components/Algos/insertSort/InsertSort';
+import QuickSort from './components/quickSort/QuickSort';
+import QuickSortCircle from './components/quickSort/QuickSortCircle';
 
 
 function App() {
@@ -23,11 +25,15 @@ function App() {
           renders the first one that matches the current URL. */}
       <Switch>
         <Route exact path="/">
-        <BubleSortCircle />
-        <BubleSortBarras />        
+         <QuickSortCircle /> 
+        <QuickSort />
         </Route>
         <Route path="/insertsort">
          <InsertionSort />
+        </Route>
+        <Route path="/bublesort">         
+         <BubleSortCircle />
+        <BubleSortBarras />
         </Route>
         <Route exact path="/mergesort">
         <MergeSort />

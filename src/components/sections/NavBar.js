@@ -7,9 +7,11 @@ import {
 
 export const NavBar = () => {
  return <nav>
-     <Link to={'/'}>Buble Sort</Link>
-     <Link to={'/insertsort'}>Insertion Sort</Link>
-     <Link to={'/quicksort'}>Quick Sort</Link>
+   <ul>
+     <Link to={'/'}>Quick Sort</Link>
+     <Link to={'/bublesort'}>Buble Sort</Link>
+     <Link to={'/insertsort'}>Insertion Sort</Link>     
      <Link to={'/mergesort'}>Merge Sort</Link>
+     </ul>
  </nav>
 }

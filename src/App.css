@@ -20,6 +20,9 @@ body {
 
 .line {
   background-color: rgb(15, 179, 64);
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 3rem;
 }
 .cube {
   width: 3rem;
@@ -35,6 +38,7 @@ body {
 }
 .select2 {
   background-color: var(--red);
+
 }
 .indi {
   width: 1rem;
@@ -60,13 +64,21 @@ section {
   margin: 5%;
   margin-bottom: 10em;
 }
-
 nav {
+  margin-top: -1rem;
+  padding: 0;
+  position: sticky;
+  top: 0;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
   display: flex;
   color: var(--green);
   background-color: #150b7281;
   font-size: calc(var(--font-size) * 1);
   justify-content: space-around;
+  
 }
 
 nav a{
@@ -97,7 +109,7 @@ nav h2:selected {
     text-align: center;
     align-items: center;
   }
-  nav {
+  nav ul{
     padding: 0 15%;
   }
   
