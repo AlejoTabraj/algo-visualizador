@@ -41,7 +41,7 @@ export const InsertionSort = () => {
 
   return (
     <>
-      <div className="cubes m-top">
+      <div className="cubes">
         {arr.length &&
           arr.map((element, i) => (
             <GiBranchArrow

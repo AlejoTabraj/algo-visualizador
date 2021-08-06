@@ -36,9 +36,7 @@ export const InsertionSortCircle = () => {
             arr.map((element, i) => (
               <div
                 key={i + 'lol'}
-                className={`${i == index ? 'select' : null} ${
-                  i == index + 1 ? 'select2' : null
-                } cube`}
+                className={`${i == index ? 'select2' : null}  cube`}
               >
                 {element}
               </div>
