@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { GiBranchArrow } from 'react-icons/gi'
+import React, { useState, useEffect } from "react";
+import { GiBranchArrow } from "react-icons/gi";
 
-export const  MergeSort = () => {
+export const MergeSort = () => {
   const [arr, setArr] = useState([]);
   const [index, setIndex] = useState([]);
-  const [change, setChange] = useState(true)
-
+  const [change, setChange] = useState(true);
+  const [dis, setDis] = useState(false);
 
   function flatten(arr) {
     const newArr = arr.reduce((acc, item) => {
@@ -95,23 +95,26 @@ export const  MergeSort = () => {
               style={{
                 height: `${10 * element}px`,
                 width: `calc(100% / ${arr.length})`,
-                margin: '0 0.5px'
+                margin: "0 0.5px",
               }}
-              key={i + 'lol'}
+              key={i + "lol"}
               className={`line`}
             />
           ))}
       </div>
-      <section className='s-around'>
+      <section className="s-around">
         <button
-          onClick={e => {
+          disabled={dis}
+          onClick={(e) => {
+            setDis(!dis);
             mergeSort(arr);
           }}
         >
           Ordenar
         </button>
         <button
-          onClick={e => {
+          disabled={dis}
+          onClick={(e) => {
             setChange(!change);
           }}
         >
@@ -120,4 +123,4 @@ export const  MergeSort = () => {
       </section>
     </>
   );
-}
+};

@@ -29,7 +29,7 @@ export const BubleSortBarras = () => {
       insideBuble(array);
       return setTimeout(() => {
         buble(array, i + 1);
-      }, ((array.length * 1.4) * range));
+      }, ((array.length * 1.7) * range));
     }
   
     useEffect(() => {
@@ -62,7 +62,7 @@ export const BubleSortBarras = () => {
         <button disabled={dis} onClick={e => { buble(arr); setDis(true)}}>Ordenar</button>
         <input disabled={dis} desctivado type='range' value={range} min={1} max={150} onChange={e=> setRange(e.target.value)}/>
         
-        <input disabled={dis} desctivado type='range' min={5} max={60} value={lines} onChange={e => setLines(e.target.value)} />
+        <input disabled={dis} desctivado type='range' min={20} max={60} value={lines} onChange={e => setLines(e.target.value)} />
         <button  onClick={ e => window.location.reload(!reload)}> Recargar </button>
         </section>
       </>

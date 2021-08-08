@@ -8,7 +8,7 @@ export default function QuickSort() {
   const [lines, setLines] = useState(63);
   const [index, setIndex] = useState([]);
   const [pivo, setPivo] = useState([]);
-
+  const [dis, setDis] = useState(false)
   useEffect(() => {
     let newArray = [];
     for (let i = 0; i < lines; i++) {
@@ -93,13 +93,16 @@ export default function QuickSort() {
       </div>
       <section>
         <button
+        disabled={dis}
           onClick={e => {
+            setDis(!dis)
             quikSort(arr, 0, arr.length);
           }}
         >
           Ordenar
         </button>
         <input
+        disabled={dis}
           onChange={e => setTime(e.target.value)}
           type={'range'}
           value={time}
@@ -107,6 +110,7 @@ export default function QuickSort() {
           max="60"
         />
         <input
+        disabled={dis}
           onChange={e => setLines(e.target.value)}
           type={'range'}
           value={lines}

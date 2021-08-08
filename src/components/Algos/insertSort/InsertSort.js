@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { GiBranchArrow } from 'react-icons/gi'
+import React, { useState, useEffect } from "react";
+import { GiBranchArrow } from "react-icons/gi";
 
 export const InsertionSort = () => {
   const [arr, setArr] = useState([]);
   const [index, setIndex] = useState([]);
   const [time, setTime] = useState(50);
   const [lines, setLines] = useState(63);
-
+  const [dis, setDis] = useState(false);
   useEffect(() => {
     let newArray = [];
     for (let i = 0; i < lines; i++) {
@@ -48,31 +48,35 @@ export const InsertionSort = () => {
               style={{
                 height: `${10 * element}px`,
                 width: `calc(100% / ${arr.length})`,
-                margin: '0 0.5px'
+                margin: "0 0.5px",
               }}
-              key={i + 'lol'}
-              className={`${i == index - 1 ? 'select2' : null}  line`}
+              key={i + "lol"}
+              className={`${i == index - 1 ? "select2" : null}  line`}
             />
           ))}
       </div>
       <section>
         <button
-          onClick={e => {
+          disabled={dis}
+          onClick={(e) => {
+            setDis(!dis);
             insert(arr, 1);
           }}
         >
           Ordenar
         </button>
         <input
-          onChange={e => setTime(e.target.value)}
-          type={'range'}
+          disabled={dis}
+          onChange={(e) => setTime(e.target.value)}
+          type={"range"}
           value={time}
           min="15"
           max="60"
         />
         <input
-          onChange={e => setLines(e.target.value)}
-          type={'range'}
+          disabled={dis}
+          onChange={(e) => setLines(e.target.value)}
+          type={"range"}
           value={lines}
           min="15"
           max="100"
@@ -80,4 +84,4 @@ export const InsertionSort = () => {
       </section>
     </>
   );
-}
+};

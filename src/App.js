@@ -13,6 +13,7 @@ import { InsertionSort } from './components/Algos/insertSort/InsertSort';
 import QuickSort from './components/quickSort/QuickSort';
 import QuickSortCircle from './components/quickSort/QuickSortCircle';
 import { InsertionSortCircle } from './components/Algos/insertSort/InsertionSortCircle';
+import { BetterMergeSort } from './components/MergeSort.js/BetterMergeSort';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         </Route>
         <Route exact path="/mergesort">
         <MergeSort />
+        <BetterMergeSort />
         </Route>
       </Switch>
     </main>
